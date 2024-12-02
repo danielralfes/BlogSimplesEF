@@ -1,0 +1,14 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "notify.js@3.0.0",
+      "destination": "wwwroot/lib/notify.js/"
+    },
+    {
+      "library": "signalr.js@2.4.3",
+      "destination": "wwwroot/lib/signalr.js/"
+    }
+  ]
+}

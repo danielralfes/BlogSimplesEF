@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BlogSimplesEF.Web</title>
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BlogSimplesEF.Web.styles.css" asp-append-version="true" /> *@
+    <environment include="Development,Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+        <!-- Font Awesome -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- DataTables -->
+        <link href="~/lib/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/dataTables.fontAwesome.css" rel="stylesheet" />
+        <!-- Button -->
+        <link href="~/lib/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+        <!--Loading-->
+        <link href="~/css/loading.css" rel="stylesheet" />
+        <!--Powertip Tooltip-->
+        <link href="~/lib/jquery-powertip/css/jquery.powertip.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">BlogSimplesEF.Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - BlogSimplesEF.Web - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.4/signalr.min.js"></script> *@
+@* 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false) *@
+
+    <environment include="Development,Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Underscore -->
+        <script src="~/lib/Underscore/underscore-min.js"></script>
+        <!-- DataTables -->
+        <script src="~/lib/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/lib/datatables/jquery.dataTables.js"></script>
+        <script src="~/lib/datatables/dataTables.bootstrap4.js"></script>
+        <script src="~/lib/datatables/dataTables.buttons.min.js"></script>
+        <!-- Buttons -->
+        <script src="~/lib/buttons/js/buttons.bootstrap4.min.js"></script>
+        <script src="~/lib/buttons/js/buttons.html5.min.js"></script>
+        <script src="~/lib/buttons/js/buttons.print.min.js"></script>
+        <script src="~/lib/buttons/js/buttons.colVis.min.js"></script>
+
+        <!-- Input Masks -->
+        <script src="~/lib/input-mask/jquery.inputmask.js"></script>
+        <script src="~/lib/input-mask/inputmask.js"></script>
+        <script src="~/lib/input-mask/bindings/inputmask.binding.js"></script>
+        <script src="~/lib/input-mask/jquery.inputmask.bundle.js"></script>
+
+        <!--Script Site-->
+        <script src="~/lib/notify.js/notify.js"></script>
+        <script src="~/js/Loading.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+		<script src="~/js/posthub.js"></script>
+        @RenderSection("Scripts", required: false)
+    </environment>
+    <div class="modalAjax"><!-- Place at bottom of page --></div>
+    <div id="notifications"></div>
+</body>
+</html>

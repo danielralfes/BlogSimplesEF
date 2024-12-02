@@ -1,0 +1,16 @@
+{
+  "name": "BlogSimplesEF",
+  "version": "1.0.0",
+  "description": "Básico de blog onde os usuários podem visualizar, criar, editar e excluir postagens.",
+  "main": "index.js",
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
